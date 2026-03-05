@@ -31,12 +31,12 @@ class Expense(Transaction):
         label = "[EXPENSE]"
         return f"{label:<10} [{self.date}] | ${self.amount:>10,.2f} | {self.description:<30} | {self.category}" #[EXPENSE] [2024-03-15] | $250.00 | Freelance work payment | CATEGORY
 
-def main():
-    t = Transaction(250.00, "2025-03-15", "Test transaction")
-    print(f"/------Test transaction-----/\n{t}\n/-----------------------/")
+# def main():
+#     t = Transaction(250.00, "2025-03-15", "Test transaction")
+#     print(f"/------Test transaction-----/\n{t}\n/-----------------------/")
 
-    i = Income(250.00, "2025-03-15", "Test transaction", "Warehouse Gig")
-    print(f"/------Test income-----/\n{i}\n/----------------/")
+#     i = Income(250.00, "2025-03-15", "Test transaction", "Warehouse Gig")
+#     print(f"/------Test income-----/\n{i}\n/----------------/")
 
-if __name__ == "__main__": #so we don't run this anytime this file is imported, only if its run directly via python transaction.py (then __name__ == __main__)
-    main() 
+# if __name__ == "__main__": #so we don't run this anytime this file is imported, only if its run directly via python transaction.py (then __name__ == __main__)
+#     main() 
