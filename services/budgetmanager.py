@@ -1,10 +1,10 @@
 from models.transaction import Transaction, Income, Expense
-
+from services.storagehandler import storageHandler
 
 class BudgetManager:
 
-    def __init__(self):
-        self._transactions = [] #list of Transactions, which are either of type income or expense
+    def __init__(self, storage):
+        self._transactions = storage.load() #loads current list of transactions, if nothing method returns empty list
 
     def add_transaction(self, _sTransaction):
         self._transactions.append(_sTransaction) # type: ignore
