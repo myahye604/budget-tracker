@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+.env
+
+# Data file (optional - depends if you want to track it)
+data.json
+
+# VS Code
+.vscode/

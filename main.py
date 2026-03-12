@@ -1,11 +1,12 @@
 from models.transaction import Income, Expense
 from services.budgetmanager import BudgetManager
-
+from services.storagehandler import storageHandler
 
 
 def main():
 
-    manager = BudgetManager()
+    sHandler = storageHandler(r"C:\Users\moman\Documents\LearningCode\budget-tracker\data\data.json")
+    manager = BudgetManager(sHandler)
 
     # Income transactions
     i1 = Income(2500.00, "2025-03-15", "March salary", "Salary")
@@ -23,7 +24,11 @@ def main():
     manager.add_transaction(i3)
     manager.add_transaction(e1)
     manager.add_transaction(e2)
-    manager.add_transaction(e3)
+    manager.add_transaction(e3) #at this point our data.json will be populated with these
+
+
+
+
 
     # Test get_total_income
     print(f"Total Income: ${manager.get_total_income():,.2f}")
