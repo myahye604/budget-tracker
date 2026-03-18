@@ -45,15 +45,15 @@ class storageHandler:
 
     def load(self): #loads data.json, returns list of Transaction obj
         _transactions = []
-        print("in load function..")
-        print(f"filepath: {self._filepath}")
+        #print("in load function..")
+        #print(f"filepath: {self._filepath}")
         try:
             with open(self._filepath, "r") as f:
                 data = json.load(f)
             _transactions =self._deserialize(data)
-            print("loading all current transactions in file...")
-            for t in _transactions:
-                print(t)
+            # #print("loading all current transactions in file...")
+            # for t in _transactions:
+            #     print(t)
         except Exception as e:
             print(f"[DEBUG] Load failled due to: {e}")
         return _transactions

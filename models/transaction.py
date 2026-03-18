@@ -29,7 +29,7 @@ class Expense(Transaction):
 
     def __str__(self): 
         label = "[EXPENSE]"
-        return f"{label:<10} [{self.date}] | ${self.amount:>10,.2f} | {self.description:<30} | {self.category}" #[EXPENSE] [2024-03-15] | $250.00 | Freelance work payment | CATEGORY
+        return f"{label:<10} [{self.date}] | ${-self.amount:>10,.2f} | {self.description:<30} | {self.category}" #[EXPENSE] [2024-03-15] | $250.00 | Freelance work payment | CATEGORY
 
 # def main():
 #     t = Transaction(250.00, "2025-03-15", "Test transaction")
